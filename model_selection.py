@@ -40,7 +40,7 @@ print("Minority Class Oversampled")
 from sklearn.svm import LinearSVC
 from sklearn.linear_model import LogisticRegression
 from sklearn.tree import DecisionTreeClassifier
-from sklearn.ensemble import RandomForestClassifier
+from sklearn.ensemble import RandomForestClassifier, GradientBoostingClassifier
 
 from sklearn.metrics import f1_score
 from sklearn.metrics import recall_score
@@ -49,7 +49,8 @@ models = [
     LinearSVC(random_state=0),
     LogisticRegression(random_state=0),
     DecisionTreeClassifier(random_state=0),
-    RandomForestClassifier(n_estimators=100, max_depth=5, random_state=0)
+    RandomForestClassifier(n_estimators=100, max_depth=5, random_state=0),
+    GradientBoostingClassifier(n_estimators=100, learning_rate=1.0, max_depth=1, random_state=0)
 ]
 print("Models initialized")
 
