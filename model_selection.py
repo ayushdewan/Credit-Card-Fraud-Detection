@@ -87,7 +87,7 @@ fig.subplots_adjust(hspace=1)
 axes[0].set_title("Recall and F1 Scores for each Model")
 axes[1].set_title("Feature Importance")
 
-# Asjust plot size
+# Adjust plot size
 curr_size = plt.rcParams["figure.figsize"]
 plt.rcParams["figure.figsize"] = (curr_size[0] * 3, curr_size[1] * 2)
 
