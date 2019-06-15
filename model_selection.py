@@ -84,12 +84,12 @@ for clf in models:
 # 6: Display results graphically
 fig, axes = plt.subplots(ncols=1, nrows=2)
 fig.subplots_adjust(hspace=1)
+fig.set_size_inches(12, 6, forward=True)
 axes[0].set_title("Recall and F1 Scores for each Model")
 axes[1].set_title("Feature Importance")
 
 # Adjust plot size
-curr_size = plt.rcParams["figure.figsize"]
-plt.rcParams["figure.figsize"] = (curr_size[0] * 3, curr_size[1] * 2)
+plt.rcParams["figure.figsize"] = (12, 6)
 
 # Recall and F1 Scores per model
 ax1 = sns.barplot(x="model_type", y="score", hue="score_type", data=models_df, ax=axes[0])
