@@ -155,3 +155,5 @@ plt.show()
 
 sns.lineplot(x="n_estimators", y="score", hue="type", data=ne_loss_df)
 plt.show()
+
+# Best parameters: learnign_rate = 0.5, n_estimators = s100
